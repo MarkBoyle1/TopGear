@@ -3,7 +3,7 @@ namespace TopGear
     public class GearRanges
     {
         public int[][] gearRanges;
-
+        
         public GearRanges()
         {
             gearRanges = new int[][]
@@ -15,6 +15,12 @@ namespace TopGear
                 new int[] {700, 2200},
                 new int[] {800, 2400}
             };
+        }
+
+        public void AdjustGearRange(int gear, int minValue, int maxValue)
+        {
+            gearRanges[gear][0] = minValue; 
+            gearRanges[gear][1] = maxValue;
         }
     }
 }
